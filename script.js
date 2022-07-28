@@ -1,42 +1,31 @@
-function countDown(){
-
-
-
-
-
-
 let output = document.querySelector('.output');
 output.innerHTML = '';
 
- let i = 10;
+let i = 10;
+//inside the loop:
 
- while(i>=0){
 
-    const para = document.createElement('p');
+
+for(let i = 10; i>= 0; i--){
+      
     
     if(i ===10){
-        para.textContent = 'Starting countdown in \n 10';
+        const para = document.createElement('p');
+    para.textContent = `Countdown starting!`;
+    output.appendChild(para);
     }
-    else if(i === 0){
-        para.textContent = "🎆🎇✨🎇💥💥💥 Blast off!! 🎆🎇✨🎇💥💥💥";
-    }else{
-        para.textContent= `>>>>>>>: ${i}`;
+     else if( i=== 0){
+        const para = document.createElement('p');
+        para.textContent = `💥💥Blast Off!!💥💥`;
+        output.appendChild(para);
     }
-output.appendChild(para);
-i--;
-
- }
-// 
-// para.textContent = ;
-// output.appendChild(para);
-
-
- 
-
-
-
+    else{
+        
+        const para = document.createElement('p');
+        para.textContent = `${i}`;
+        output.appendChild(para);
+        
+    }
 
 }
-
-let btn = document.querySelector('.button');
- btn.onclick= countDown;
+// end of loop
